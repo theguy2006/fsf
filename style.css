@@ -13,6 +13,7 @@
 }
 html, body {
     overflow-x: hidden;
+    overflow-y: auto;
 }
 body {
   background: rgb(49, 49, 49);
@@ -49,7 +50,7 @@ a.b:hover {
 }
 header {
   
-   margin: 0;
+    margin: 0;
     min-height: 100vh;
 
     background:
@@ -73,7 +74,8 @@ header {
   padding: 22px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   width: 100vw;
-  height: 100vh;
+  box-sizing: border-box;
+  padding: 22px;
 }
 header img {
     width: 200px;
@@ -227,6 +229,7 @@ img#id{
   font-size: 55px;
   padding: 50px;
   color: #d4a900;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.578);
 }
 .frases{
   padding-left: 40px;
@@ -237,6 +240,7 @@ img#id{
   padding-bottom: 20px;
   color: #d4a900;
   font-size: 40px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.578);
 }
 .frases p{
   padding-bottom: 20px;
@@ -245,18 +249,17 @@ img#id{
   padding: 20px;
 }
 .reveal {
+      display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 530px;
+    height: auto;
+    padding: 0;
+    margin-left: auto;
+    margin-right: 50px;
     opacity: 0;
     transform: translateY(50px);
     transition: all 0.9s ease;
-    width: 500px;
-    height: auto;
-      display: flex;
-    justify-content: space-between;
-    padding: 30px;
-    gap: 30px;
-    margin-left: 800px;
-    position: relative;
-    top: -690px !important;
     -webkit-mask-image: linear-gradient(
         to bottom,
         black 70%,
@@ -287,4 +290,54 @@ img.reveal {
 .reveal.ativo {
     opacity: 1;
     transform: translateY(0); 
+}
+img.reveal {
+    position: relative;
+    top: -660px;
+    margin-bottom: -500px;
+}
+.agra{
+  margin: 0;
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            transparent 65%,
+            rgba(255, 215, 0, 0.12) 65%
+        ),
+        linear-gradient(
+            45deg,
+            transparent 75%,
+            rgba(255, 255, 255, 0.06) 75%
+        ),
+        linear-gradient(
+            120deg,
+            #6b4b00,
+            #b8860b,
+            #d4a900,
+            #8b6508
+        );
+}
+.faca{
+  font-weight: bold;
+  font-size: 20px;
+  color: #d4a900;
+  text-shadow: 2px 2px 4px black;  
+}
+.agra{
+  padding-top: 100px;
+  padding-left: 20px;
+}
+.crono{
+  font-size: 30px;
+}
+.men{
+  background-color: #b8860b;
+  border-radius: 10px;
+  padding: 10px;
+  padding-bottom: 10px;
+}
+.men1{
+  display: inline-block
 }
