@@ -1,17 +1,157 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
+
+/* CONFIGURAÇÕES GERAIS */
+
 :root {
-    --fonte-principal: "Raleway", sans-serif;
-
-
-body{
-    text-align: center;
-    font-family:var(--fonte-principal) ;
-    background-color: bisque;
-    
+    --dourado: #d4a900;
+    --dourado-escuro: #8b6508;
+    --fundo: rgb(49, 49, 49);
+    --branco: #f3f4f6;
 }
-main{
-    width: 1520px;
-    background-color: gray;
-    height: auto;
-    font-size: 20px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--fundo);
+    color: var(--branco);
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* CABEÇALHO */
+
+header {
+    min-height: 250px;
+    padding: 50px 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            transparent 65%,
+            rgba(255, 215, 0, 0.12) 65%
+        ),
+        linear-gradient(
+            45deg,
+            transparent 75%,
+            rgba(255, 255, 255, 0.06) 75%
+        ),
+        linear-gradient(
+            120deg,
+            #6b4b00,
+            #b8860b,
+            #d4a900,
+            #8b6508
+        );
+
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    font-size: clamp(30px, 5vw, 55px);
+    font-weight: 900;
+    text-align: center;
+    color: #171717;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 3px rgba(255,255,255,0.15);
+}
+
+/* CONTEÚDO PRINCIPAL */
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 70px 20px;
+}
+
+article {
+    max-width: 1000px;
+    width: 100%;
+
+    padding: 50px;
+    background: #414141;
+
+    border-left: 5px solid var(--dourado);
+    border-radius: 12px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+    transition: 0.3s ease;
+}
+
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* PARÁGRAFOS */
+
+article p {
+    font-size: 19px;
+    line-height: 2;
+    color: #dedede;
+
+    margin-bottom: 25px;
+}
+
+article p:last-child {
+    margin-bottom: 0;
+}
+
+/* DESTAQUES */
+
+article strong {
+    color: var(--dourado);
+    font-weight: 800;
+}
+
+/* RODAPÉ */
+
+footer {
+    background: #222;
+    padding: 25px;
+    text-align: center;
+    color: #aaa;
+    font-size: 13px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+
+    header {
+        min-height: 180px;
+        padding: 30px 15px;
+    }
+
+    main {
+        padding: 40px 15px;
+    }
+
+    article {
+        padding: 25px 20px;
+    }
+
+    article p {
+        font-size: 16px;
+        line-height: 1.8;
+    }
 }
