@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap");
+:root {
+    --fonte-principal: "Raleway", sans-serif;
+
+
+body{
+    text-align: center;
+    font-family:var(--fonte-principal) ;
+    background-color: bisque;
+    
+}
+main{
+    width: 1520px;
+    background-color: gray;
+    height: auto;
+    font-size: 20px;
+}
