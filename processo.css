@@ -1,0 +1,421 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
+
+/* CONFIGURAÇÕES GERAIS */
+
+:root {
+    --dourado: #d4a900;
+    --dourado-medio: #b8860b;
+    --dourado-escuro: #6b4b00;
+
+    --fundo: rgb(49, 49, 49);
+    --cartao: #414141;
+    --branco: #f3f4f6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--fundo);
+    color: var(--branco);
+    overflow-x: hidden;
+}
+
+
+/* CABEÇALHO */
+
+.cabecalho {
+    min-height: 120px;
+    padding: 15px 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    background: linear-gradient(
+        120deg,
+        #6b4b00,
+        #b8860b,
+        #d4a900,
+        #8b6508
+    );
+
+    box-shadow: 2px 2px 8px rgba(0,0,0,.4);
+}
+
+.cabecalho img {
+    width: 220px;
+    max-width: 100%;
+}
+
+.cabecalho nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.cabecalho nav a {
+    color: black;
+    font-size: 16px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.cabecalho nav a:hover {
+    color: white;
+}
+
+
+/* INTRODUÇÃO */
+
+.introducao {
+    min-height: 600px;
+    padding: 110px 8%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            transparent 65%,
+            rgba(255,215,0,.12) 65%
+        ),
+        linear-gradient(
+            45deg,
+            transparent 75%,
+            rgba(255,255,255,.06) 75%
+        ),
+        linear-gradient(
+            120deg,
+            #6b4b00,
+            #b8860b,
+            #d4a900,
+            #8b6508
+        );
+}
+
+.etiqueta {
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 5px;
+    margin-bottom: 25px;
+    color: #222;
+    text-align: center;
+}
+
+.introducao h1 {
+    font-size: clamp(45px, 6vw, 75px);
+    font-weight: 900;
+    line-height: 1.1;
+    color: black;
+}
+
+.introducao h1 span {
+    color: var(--branco);
+}
+
+.descricao {
+    max-width: 600px;
+    margin-top: 25px;
+    font-size: 20px;
+    line-height: 1.7;
+    color: #222;
+    text-align: center;
+    margin-left: 340px;
+}
+
+.botao {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 20px 30px;
+
+    background: #222;
+    color: var(--dourado);
+
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 18px;
+
+    border-radius: 10px;
+    transition: .3s;
+    text-align: center;
+}
+
+.botao:hover {
+    background: black;
+    color: white;
+    transform: translateY(-5px);
+}
+
+
+/* SEÇÃO DAS ETAPAS */
+
+.etapas {
+    padding: 100px 5%;
+}
+
+.titulo-secao {
+    text-align: center;
+    margin-bottom: 65px;
+}
+
+.titulo-secao > p {
+    color: var(--dourado);
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+}
+
+.titulo-secao h2 {
+    font-size: clamp(32px, 5vw, 50px);
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.titulo-secao span {
+    color: #aaa;
+    font-size: 17px;
+}
+
+
+/* GRADE DE CARTÕES */
+
+.grade-etapas {
+    max-width: 1250px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+}
+
+
+/* CARTÕES */
+
+.card-etapa {
+    position: relative;
+    overflow: hidden;
+
+    padding: 35px 30px;
+    min-height: 290px;
+
+    background: var(--cartao);
+
+    border: 1px solid rgba(212,169,0,.2);
+    border-radius: 15px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,.2);
+
+    transition: .3s ease;
+}
+
+.card-etapa:hover {
+    transform: translateY(-10px);
+
+    border-color: var(--dourado);
+
+    box-shadow: 0 15px 35px rgba(0,0,0,.4);
+}
+
+
+/* NUMERAÇÃO */
+
+.numero {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+
+    font-size: 55px;
+    font-weight: 900;
+
+    color: rgba(212,169,0,.12);
+}
+
+
+/* CÍRCULO NUMERADO */
+
+.icone {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: var(--dourado);
+    color: black;
+
+    font-weight: 900;
+    font-size: 18px;
+
+    margin-bottom: 25px;
+}
+
+.card-etapa h3 {
+    font-size: 22px;
+    color: var(--dourado);
+    margin-bottom: 15px;
+}
+
+.card-etapa p {
+    color: #ccc;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* MENSAGEM FINAL */
+
+.mensagem {
+    padding: 100px 20px;
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            transparent 65%,
+            rgba(255,255,255,.08) 65%
+        ),
+        linear-gradient(
+            120deg,
+            #6b4b00,
+            #b8860b,
+            #d4a900,
+            #8b6508
+        );
+}
+
+.frase {
+    color: black;
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: 5px;
+    margin-bottom: 25px;
+}
+
+.mensagem h2 {
+    color: black;
+    font-size: clamp(30px, 5vw, 50px);
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+.mensagem > p:not(.frase) {
+    color: #222;
+    font-size: 18px;
+    margin-top: 25px;
+    line-height: 1.7;
+}
+
+.mensagem a {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 20px 30px;
+
+    background: #222;
+    color: var(--dourado);
+
+    text-decoration: none;
+    font-weight: 900;
+
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.mensagem a:hover {
+    background: black;
+    color: white;
+    transform: translateY(-5px);
+}
+
+
+/* RODAPÉ */
+
+footer {
+    padding: 25px;
+    text-align: center;
+    background: #222;
+    color: #aaa;
+    font-size: 13px;
+}
+
+
+/* TABLETS */
+
+@media (max-width: 950px) {
+
+    .grade-etapas {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+
+    .cabecalho {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .cabecalho nav {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .cabecalho nav a {
+        font-size: 14px;
+    }
+
+    .introducao {
+        min-height: 500px;
+        padding: 70px 25px;
+    }
+
+    .descricao {
+        font-size: 16px;
+    }
+
+    .etapas {
+        padding: 70px 20px;
+    }
+
+    .grade-etapas {
+        grid-template-columns: 1fr;
+    }
+
+    .card-etapa {
+        min-height: auto;
+    }
+
+    .mensagem {
+        padding: 75px 20px;
+    }
+
+}
+.evu{
+    text-align: center;
+}
+.final{
+    color: #f3f4f6;
+}
