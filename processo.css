@@ -419,3 +419,10 @@ footer {
 .final{
     color: #f3f4f6;
 }
+.image {
+  align-items: center;
+  margin-bottom: 20px;
+}
+.image img {
+  margin: 0 5px;
+  filter: invert(100%);}

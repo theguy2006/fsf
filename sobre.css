@@ -1,0 +1,334 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Oswald:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: rgb(49, 49, 49);
+    color: #f1f1f1;
+    font-family: 'Raleway', sans-serif;
+    overflow-x: hidden;
+}
+.cabecalho {
+    min-height: 10px;
+    padding: 10px 5%;
+    background: linear-gradient(
+        120deg,
+        #6b4b00,
+        #b8860b,
+        #d4a900,
+        #8b6508
+    );
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.4);
+}
+
+.cabecalho img {
+    width: 130px;
+}
+
+.cabecalho nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.cabecalho nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+    transition: .3s;
+}
+
+.cabecalho nav a:hover {
+    color: white;
+}
+.res{
+    text-align: center;
+    color: var(--dourado);
+    font-size: 30px;
+    padding: 10px;
+}
+
+:root {
+    --dourado: #c9a451;
+    --fundo: #252525;
+    --texto: #f1f1f1;
+}
+
+.subtitulo {
+    display: block;
+    color: var(--dourado);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+/* HERO */
+
+
+.sobre-hero {
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    padding: 80px 10%;
+    position: relative;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(15, 15, 15, 0.98) 0%,
+            rgba(15, 15, 15, 0.80) 40%,
+            rgba(15, 15, 15, 0.15) 100%
+        ),
+        url("../imagens/studio-banner.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.hero-conteudo {
+    max-width: 650px;
+}
+
+.hero-conteudo h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(42px, 6vw, 75px);
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.hero-conteudo h1 span {
+    color: var(--dourado);
+}
+
+.hero-conteudo p {
+    color: #c5c5c5;
+    line-height: 1.9;
+    max-width: 550px;
+    margin-bottom: 35px;
+}
+
+/* BOTÃO */
+
+.btn-sobre {
+    display: inline-block;
+    background: var(--dourado);
+    color: #171717;
+    padding: 16px 25px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    transition: .3s;
+}
+
+.btn-sobre:hover {
+    background: #f0cf7b;
+    transform: translateY(-4px);
+}
+
+/* QUEM SOMOS */
+
+.quem-somos {
+    padding: 110px 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+}
+
+.quem-texto h2,
+.filosofia h2,
+.diferenciais h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(32px, 4vw, 48px);
+    margin-bottom: 25px;
+}
+
+.quem-texto p {
+    color: #c5c5c5;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+.quem-imagem {
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+}
+
+.quem-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.quem-imagem:hover img {
+    transform: scale(1.05);
+}
+
+/* FILOSOFIA */
+
+.filosofia {
+    background: #222;
+    text-align: center;
+    padding: 100px 15%;
+}
+
+.filosofia h2 {
+    max-width: 800px;
+    margin: 0 auto 25px;
+}
+
+.filosofia p {
+    color: #c5c5c5;
+    line-height: 1.9;
+    margin: 0 auto 15px;
+    max-width: 750px;
+}
+
+/* DIFERENCIAIS */
+
+.diferenciais {
+    padding: 110px 10%;
+    text-align: center;
+}
+
+.diferenciais-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 55px;
+}
+
+.diferencial-card {
+    background: #252525;
+    border: 1px solid #454545;
+    padding: 40px 30px;
+    text-align: left;
+    transition: .3s;
+}
+
+.diferencial-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--dourado);
+    box-shadow: 0 10px 30px rgba(0,0,0,.3);
+}
+
+.diferencial-card span {
+    color: var(--dourado);
+    font-family: 'Oswald', sans-serif;
+    font-size: 35px;
+}
+
+.diferencial-card h3 {
+    font-family: 'Oswald', sans-serif;
+    margin: 20px 0 15px;
+    font-size: 23px;
+}
+
+.diferencial-card p {
+    color: #bdbdbd;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* FINAL */
+
+.sobre-final {
+    background: linear-gradient(
+        rgba(15,15,15,.9),
+        rgba(15,15,15,.9)
+    ), url('imagens/studio-banner.jpg') center/cover;
+    text-align: center;
+    padding: 100px 10%;
+}
+
+.sobre-final h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(30px, 4vw, 45px);
+    margin-bottom: 20px;
+}
+
+.sobre-final p {
+    color: #c5c5c5;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+footer {
+    background: #000000;
+    padding: 25px;
+    text-align: center;
+    color: #aaa;
+    font-size: 13px;
+}
+.c{
+    text-decoration: none;
+  padding: 10px;
+  font-weight: bold;
+  color: rgb(209, 209, 209);
+  font-size: 16px;
+  }
+.c :hover{
+font-size: 18px;
+  color: white;
+  transition: 0.2s;
+}
+.image {
+  align-items: center;
+  margin-bottom: 40px;
+}
+.image img {
+  margin: 0 5px;
+  filter: invert(100%);}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 800px) {
+
+    .sobre-hero {
+        padding: 80px 7%;
+        min-height: 500px;
+    }
+
+    .quem-somos {
+        grid-template-columns: 1fr;
+        padding: 75px 7%;
+        gap: 35px;
+    }
+
+    .quem-imagem {
+        height: 350px;
+    }
+
+    .diferenciais {
+        padding: 75px 7%;
+    }
+
+    .diferenciais-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filosofia {
+        padding: 75px 7%;
+    }
+}

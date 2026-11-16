@@ -257,13 +257,7 @@ padding-bottom: 10px;
     justify-content: center;
     font-size: 22px;
 }
-footer {
-    background: #222;
-    padding: 25px;
-    text-align: center;
-    color: #aaa;
-    font-size: 13px;
-}
+
 .c{
     text-decoration: none;
   padding: 10px;
@@ -275,4 +269,60 @@ footer {
 font-size: 18px;
   color: white;
   transition: 0.2s;
+}
+footer {
+    background: #222;
+    padding: 25px 20px;
+    text-align: center;
+    color: #aaa;
+    font-size: 13px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+/* ÍCONES */
+.image {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px 12px;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.image img {
+    width: 45px;
+    height: 45px;
+    margin: 0;
+    filter: invert(100%);
+}
+
+/* Direitos autorais abaixo dos ícones */
+.image p {
+    flex-basis: 100%;
+    text-align: center;
+    margin: 0;
+}
+
+/* LINKS */
+.c {
+    text-decoration: none;
+    padding: 5px;
+    font-weight: bold;
+    color: rgb(209, 209, 209);
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.c:hover {
+    color: white;
+}
+
+/* NAVEGAÇÃO */
+footer nav {
+    margin-top: 90px;
 }

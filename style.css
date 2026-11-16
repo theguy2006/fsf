@@ -40,45 +40,66 @@ a.b {
   font-weight: bold;
   color: black;
   font-size: 16px;
-  
 }
-.c{
-    text-decoration: none;
+.c {
+  text-decoration: none;
   padding: 10px;
   font-weight: bold;
   color: rgb(209, 209, 209);
   font-size: 16px;
-  }
-.c :hover{
-font-size: 18px;
+}
+.c :hover {
+  font-size: 18px;
   color: white;
 }
 a.b:hover {
   font-size: 18px;
   color: white;
 }
-header {
-  margin: 0;
-  min-height: 100px;
+.cabecalho {
+    min-height: 10px;
+    padding: 10px 5%;
+    background: linear-gradient(
+        120deg,
+        #6b4b00,
+        #b8860b,
+        #d4a900,
+        #8b6508
+    );
 
-  background:
-    linear-gradient(135deg, transparent 65%, rgba(255, 215, 0, 0.12) 65%),
-    linear-gradient(45deg, transparent 75%, rgba(255, 255, 255, 0.06) 75%),
-    linear-gradient(120deg, #6b4b00, #b8860b, #d4a900, #8b6508);
-  padding: 22px;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  width: 100vw;
-  box-sizing: border-box;
-  padding: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.4);
 }
-header img {
-  width: 200px;
-  height: auto;
+
+.cabecalho img {
+    width: 130px;
 }
-nav {
-  display: flex;
-  gap: 30px;
-  align-items: center;
+
+.cabecalho nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.cabecalho nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+    transition: .3s;
+}
+
+.cabecalho nav a:hover {
+    color: white;
+}
+.res{
+    text-align: center;
+    color: var(--dourado);
+    font-size: 30px;
+    padding: 10px;
 }
 
 main#pri {
@@ -104,7 +125,6 @@ main#pri {
 .call {
   text-align: center;
   padding: 10px;
-  
 }
 .call p {
   font-size: 20px;
@@ -124,13 +144,8 @@ footer {
 }
 .image img {
   margin: 0 5px;
+  filter: invert(100%);
 }
-.image img:hover {
-  display: inline-block;
-  width: auto;
-  height: 55px;
-}
-
 img#id {
   height: auto;
   width: 200px;
@@ -318,7 +333,6 @@ img.reveal {
 }
 .desc {
   font-size: 22px;
-  
 }
 .subtitulo {
   font-size: 30px;
@@ -328,230 +342,219 @@ img.reveal {
   padding-bottom: 15px;
 }
 .real {
-    background: #222;
-    padding: 25px;
-    text-align: center;
-    color: #aaa;
-    font-size: 13px;
-    
+  background: #222;
+  padding: 25px;
+  text-align: center;
+  color: #aaa;
+  font-size: 13px;
 }
-
 
 /* ÁREA PRINCIPAL DO BANNER */
 
 .hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-    min-height: 75vh;
-    padding: 20px 0 20px 50px;
-    gap: 0;
+  min-height: 75vh;
+  padding: 20px 0 20px 50px;
+  gap: 0;
 }
 
 .hero-conteudo {
-    flex: 1;
-    position: relative;
-    z-index: 2;
-    color: #d4a900;
+  flex: 1;
+  position: relative;
+  z-index: 2;
+  color: #d4a900;
 }
-
 
 .hero-imagem {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-right: 0;
-    padding: 0;
-    overflow: visible;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 0;
+  padding: 0;
+  overflow: visible;
 }
-.text{
+.text {
   color: #f3f4f6;
 }
 
 .hero-imagem img {
-    width: 550px;
-    max-width: none;
-    height: 750px;
+  width: 550px;
+  max-width: none;
+  height: 750px;
 
-    object-fit: contain;
-    object-position: right center;
-    padding-right: 40px;
+  object-fit: contain;
+  object-position: right center;
+  padding-right: 40px;
 
-    display: block;
+  display: block;
 
-    /* DEGRADÊ */
-    -webkit-mask-image: linear-gradient(
-        to right,
-        transparent 50%,
-        rgba(0, 0, 0, 0.1) 15%,
-        rgba(0, 0, 0, 0.5) 40%,
-        black 75%
-    );
+  /* DEGRADÊ */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 50%,
+    rgba(0, 0, 0, 0.1) 15%,
+    rgba(0, 0, 0, 0.5) 40%,
+    black 75%
+  );
 
-    mask-image: linear-gradient(
-        to right,
-        transparent 0%,
-        rgba(0, 0, 0, 0.1) 15%,
-        rgba(0, 0, 0, 0.5) 40%,
-        black 75%
-    );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0, 0, 0, 0.1) 15%,
+    rgba(0, 0, 0, 0.5) 40%,
+    black 75%
+  );
 
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
 
-    -webkit-mask-size: 100% 100%;
-    mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
 }
-
 
 /* RESPONSIVIDADE */
 
 @media (max-width: 750px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
 
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 30px 20px;
-    }
+  .hero-conteudo .par {
+    font-size: 42px;
+  }
 
-    .hero-conteudo .par {
-        font-size: 42px;
-    }
+  .hero-conteudo .text {
+    font-size: 16px;
+  }
 
-    .hero-conteudo .text {
-        font-size: 16px;
-    }
+  .hero-imagem img {
+    height: 350px;
+  }
 
-    .hero-imagem img {
-        height: 350px;
-    }
-
-    .botão {
-        transform: none;
-    }
+  .botão {
+    transform: none;
+  }
 }
-.par{
+.par {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.532);
 }
 .servicos {
-    background: #202020;
-    padding: 90px 8%;
-    color: white;
+  background: #202020;
+  padding: 90px 8%;
+  color: white;
 }
 
 /* INTRODUÇÃO */
 
 .servicos-intro {
-    max-width: 650px;
-    margin-bottom: 55px;
+  max-width: 650px;
+  margin-bottom: 55px;
 }
 
 .servicos-intro span {
-    color: #d6ad26;
-    font-weight: bold;
-    letter-spacing: 3px;
-    font-size: 13px;
+  color: #d6ad26;
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-size: 13px;
 }
 
 .servicos-intro h1 {
-    font-size: clamp(32px, 5vw, 55px);
-    line-height: 1.1;
-    margin: 18px 0;
+  font-size: clamp(32px, 5vw, 55px);
+  line-height: 1.1;
+  margin: 18px 0;
 }
 
 .servicos-intro p {
-    color: #bdbdbd;
-    font-size: 17px;
-    line-height: 1.6;
+  color: #bdbdbd;
+  font-size: 17px;
+  line-height: 1.6;
 }
 
 /* GRID DOS SERVIÇOS */
 
 .servicos-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
 }
 
 /* CARDS */
 
 .servico-card {
-    background: linear-gradient(
-        135deg,
-        #303030,
-        #252525
-    );
+  background: linear-gradient(135deg, #303030, #252525);
 
-    border: 1px solid #444;
-    border-radius: 12px;
-    padding: 35px;
+  border: 1px solid #444;
+  border-radius: 12px;
+  padding: 35px;
 
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 
-    transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 .servico-card:hover {
-    transform: translateY(-8px);
-    border-color: #d6ad26;
+  transform: translateY(-8px);
+  border-color: #d6ad26;
 
-    box-shadow: 0 12px 30px rgba(0,0,0,.3);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
 }
 
 .numero {
-    color: #d6ad26;
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 2px;
+  color: #d6ad26;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
 .servico-card h2 {
-    font-size: 27px;
-    margin: 22px 0 12px;
+  font-size: 27px;
+  margin: 22px 0 12px;
 }
 
 .servico-card h3 {
-    color: #d6ad26;
-    font-size: 17px;
-    margin-bottom: 15px;
+  color: #d6ad26;
+  font-size: 17px;
+  margin-bottom: 15px;
 }
 
 .servico-card p {
-    color: #bdbdbd;
-    line-height: 1.7;
-    font-size: 15px;
+  color: #bdbdbd;
+  line-height: 1.7;
+  font-size: 15px;
 }
 
 /* RESPONSIVIDADE */
 
 @media (max-width: 768px) {
+  .servicos {
+    padding: 65px 6%;
+  }
 
-    .servicos {
-        padding: 65px 6%;
-    }
+  .servicos-container {
+    grid-template-columns: 1fr;
+  }
 
-    .servicos-container {
-        grid-template-columns: 1fr;
-    }
+  .servico-card {
+    padding: 27px;
+  }
 
-    .servico-card {
-        padding: 27px;
-    }
-
-    .servico-card h2 {
-        font-size: 23px;
-    }
+  .servico-card h2 {
+    font-size: 23px;
+  }
 }
 .servicos-intro h1 {
-    text-align: center;
-    width: 100%;
+  text-align: center;
+  width: 100%;
 }
-.espera h1{
+.espera h1 {
   font-size: 60px;
   color: white;
   padding: 100px;
-  
 }

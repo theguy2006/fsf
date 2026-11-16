@@ -286,3 +286,10 @@ font-size: 18px;
   color: white;
   transition: 0.2s;
 }
+.image {
+  align-items: center;
+  margin-bottom: 40px;
+}
+.image img {
+  margin: 0 5px;
+  filter: invert(100%);}
