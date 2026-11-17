@@ -20,6 +20,9 @@ body {
     background: var(--fundo);
     color: var(--branco);
     overflow-x: hidden;}
+    h1{
+        font-family: var(--fontes-nomes);
+    }
 
 
 .cabecalho {
@@ -91,8 +94,9 @@ body {
 }
 
 .transformacoes-intro h1 {
-    font-size: 42px;
+    font-size: 80px;
     margin: 15px 0;
+    color: #e8e8e8;
 }
 
 .transformacoes-intro p {
