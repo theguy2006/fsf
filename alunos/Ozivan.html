@@ -30,6 +30,7 @@
             <a href="../pai.html">Quem é Carlos Franco</a>
             <a href="../transformacoes.html">Transformações</a>
             <a href="../perguntas.html">Dúvidas frequentes</a>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=zoom_in" />
         </nav>
 
     </header>
@@ -51,9 +52,11 @@
             </div>
         </header>
 
-        <section class="imagem-principal">
-            <img src="../imagens/trans02.jpeg" alt="Transformação do aluno">
-        </section>
+        <div class="zoom-box">
+            <section class="imagem-principal">
+                <img src="../imagens/trans02.jpeg" alt="Transformação do aluno" class="zoomavel">
+            </section>
+        </div>
 
         <article class="conteudo-artigo">
 
@@ -151,7 +154,28 @@ Jack was genuinely shocked at how much he had achieved in just eight weeks. And 
         
     </footer>
     </main>
+    <div id="overlay">
+  <img id="imagem-grande" alt="">
+</div>
 
+<script>
+  const overlay = document.getElementById("overlay");
+  const imagemGrande = document.getElementById("imagem-grande");
+
+  document.querySelectorAll(".zoomavel").forEach(img => {
+    img.addEventListener("click", () => {
+      imagemGrande.src = img.src;
+      imagemGrande.alt = img.alt;
+      overlay.classList.add("ativo");
+    });
+  });
+
+  overlay.addEventListener("click", () => overlay.classList.remove("ativo"));
+
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape") overlay.classList.remove("ativo");
+  });
+</script>
 </body>
 </html>
 

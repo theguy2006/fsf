@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
+
 :root{
     --fonte-principal:"Oswald", sans-serif;
 }
@@ -124,10 +125,94 @@ body p{
     margin-bottom: 70px;
 }
 
+
 .imagem-principal img {
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+.zoomavel {
+  width: 200px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+/* efeito ao passar o cursor */
+.zoomavel:hover {
+  filter: brightness(50%);
+  transition: 0.2s;
+}
+
+#overlay {
+  position: fixed;
+  inset: 0;                         /* cobre a tela toda */
+  background: rgba(0, 0, 0, 0.85);  /* fundo escuro */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: zoom-out;
+}
+
+#overlay.ativo {
+  display: flex;
+}
+
+#imagem-grande {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  animation: abrir 0.25s ease;
+}
+
+@keyframes abrir {
+  from { transform: scale(0.7); opacity: 0; }
+  to   { transform: scale(1);   opacity: 1; }
+}
+.zoom-box {
+  position: relative;
+  display: block;          /* era inline-block */
+  width: 100%;            /* defina o tamanho que você quer */
+  max-width: 100%;
+  margin: 0 auto;          /* centraliza */
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.zoom-box img {
+  display: block;
+  width: 100%;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+/* escurece um pouco a imagem no hover */
+.zoom-box:hover img {
+  filter: brightness(0.6);
+}
+
+/* ícone da lupa no centro */
+.zoom-box::after {
+  content: "zoom_in";                       /* nome do ícone */
+  font-family: "Material Symbols Outlined";
+  font-size: 56px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+
+.zoom-box:hover::after {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.zoom-box:hover::after {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
 }
 
 /* CONTEÚDO */
@@ -137,7 +222,7 @@ body p{
     margin: auto;
 }
 
-.conteudo-artigo h2 {
+.conteudo-artigo h2 {   
     font-size: 30px;
     font-weight: 800;
     margin-bottom: 25px;
