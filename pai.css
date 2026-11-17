@@ -20,7 +20,52 @@
 html {
     scroll-behavior: smooth;
 }
+.cabecalho {
+    min-height: 120px;
+    padding: 15px 5%;
+    background: linear-gradient(
+        120deg,
+        #6b4b00,
+        #b8860b,
+        #d4a900,
+        #8b6508
+    );
 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.4);
+    
+}
+
+.cabecalho img {
+    width: 130px;
+}
+
+.cabecalho nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.cabecalho nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+    transition: .3s;
+}
+
+.cabecalho nav a:hover {
+    color: white;
+}
+.res{
+    text-align: center;
+    color: var(--dourado);
+    font-size: 30px;
+    padding: 10px;
+}
 body {
     min-height: 100vh;
     background: var(--fundo);
