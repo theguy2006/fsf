@@ -203,7 +203,7 @@ body {
     display: inline-block;
     margin-top: 15px;
 
-    color: #d6ad26;
+    color:  white;
     text-decoration: none;
     font-weight: bold;
 
@@ -211,8 +211,7 @@ body {
 }
 
 .trans-info a:hover {
-    color: white;
-    padding-left: 5px;
+    color: #d6ad26;
 }
 
 /* RESPONSIVIDADE */
