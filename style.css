@@ -558,3 +558,393 @@ img.reveal {
   color: white;
   padding: 100px;
 }
+
+/* =====================================
+   RESPONSIVIDADE GERAL
+===================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* =====================================
+   TABLETS E NOTEBOOKS
+===================================== */
+
+@media (max-width: 1024px) {
+
+    .hero {
+        min-height: auto;
+        padding: 40px 25px;
+        gap: 10px;
+    }
+
+    .hero-imagem img {
+        width: 100%;
+        max-width: 450px;
+        height: 550px;
+        padding-right: 0;
+    }
+
+    .par {
+        font-size: 45px;
+        padding: 25px;
+    }
+
+    .text {
+        font-size: 18px;
+        padding: 20px;
+        transform: none;
+    }
+
+    .transformacoes {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .reveal {
+        width: 45%;
+        margin-right: 20px;
+    }
+
+    img.reveal {
+        width: 45%;
+        top: 0;
+        margin-bottom: 0;
+    }
+
+    .oque {
+        font-size: 42px;
+        padding: 30px;
+    }
+
+    .frases h2 {
+        font-size: 32px;
+    }
+
+    .frases p {
+        font-size: 18px;
+    }
+
+    .espera h1 {
+        font-size: 45px;
+        padding: 60px 20px;
+    }
+}
+
+/* =====================================
+   CELULARES E TABLETS PEQUENOS
+===================================== */
+
+@media (max-width: 750px) {
+
+    /* CABEÇALHO */
+
+    .cabecalho {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .cabecalho img {
+        width: 100px;
+    }
+
+    .cabecalho nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .cabecalho nav a {
+        font-size: 13px;
+    }
+
+    a.b, .c {
+        font-size: 14px;
+        padding: 6px;
+    }
+
+    /* BANNER */
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 35px 15px;
+        gap: 20px;
+    }
+
+    .hero-conteudo {
+        width: 100%;
+    }
+
+    .hero-conteudo .par {
+        font-size: clamp(32px, 8vw, 45px);
+        padding: 15px 5px;
+    }
+
+    .hero-conteudo .text {
+        font-size: 16px;
+        padding: 10px;
+        transform: none;
+    }
+
+    .hero-imagem {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-imagem img {
+        width: 100%;
+        max-width: 380px;
+        height: auto;
+        max-height: 400px;
+        padding: 0;
+        object-fit: contain;
+    }
+
+    /* BOTÕES */
+
+    .botão {
+        transform: none;
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .btn {
+        font-size: 18px;
+    }
+
+    /* TRANSFORMAÇÕES */
+
+    .transformacoes {
+        grid-template-columns: 1fr;
+        padding: 15px;
+        margin: 25px auto;
+        gap: 25px;
+    }
+
+    .card img {
+        height: 260px;
+    }
+
+    .card-conteudo {
+        padding: 20px;
+    }
+
+    .card-conteudo h2 {
+        font-size: 21px;
+    }
+
+    .card-conteudo p {
+        font-size: 15px;
+    }
+
+    /* TEXTOS */
+
+    .oque {
+        font-size: 32px;
+        padding: 25px 15px;
+        text-align: center;
+    }
+
+    .frases {
+        padding: 20px;
+    }
+
+    .frases h2 {
+        font-size: 27px;
+        text-align: center;
+    }
+
+    .frases p {
+        font-size: 16px;
+        padding: 10px 0;
+    }
+
+    /* IMAGENS REVEAL */
+
+    .reveal {
+        width: 100%;
+        margin: 20px auto;
+        height: auto;
+        gap: 15px;
+    }
+
+    img.reveal {
+        position: static;
+        width: 100%;
+        max-width: 450px;
+        height: auto;
+        margin: 20px auto;
+        transform: translateY(50px);
+    }
+
+    /* SERVIÇOS */
+
+    .servicos {
+        padding: 50px 20px;
+    }
+
+    .servicos-intro {
+        margin-bottom: 35px;
+    }
+
+    .servicos-intro h1 {
+        font-size: 32px;
+    }
+
+    .servicos-intro p {
+        font-size: 15px;
+    }
+
+    .servicos-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .servico-card {
+        padding: 25px;
+    }
+
+    .servico-card h2 {
+        font-size: 22px;
+    }
+
+    .servico-card h3 {
+        font-size: 16px;
+    }
+
+    .servico-card p {
+        font-size: 14px;
+    }
+
+    /* OUTROS ELEMENTOS */
+
+    main#pri {
+        flex-direction: column;
+        gap: 25px;
+        padding: 25px 15px;
+    }
+
+    .info {
+        font-size: 24px;
+    }
+
+    .sub {
+        font-size: 13px;
+    }
+
+    .crono {
+        font-size: 23px;
+        padding-bottom: 25px;
+    }
+
+    .desc {
+        font-size: 17px;
+    }
+
+    .subtitulo {
+        font-size: 25px;
+    }
+
+    .agra {
+        padding: 60px 15px;
+    }
+
+    .fra {
+        padding: 15px;
+    }
+
+    .men1 {
+        margin: 5px;
+    }
+
+    .espera h1 {
+        font-size: 32px;
+        padding: 50px 15px;
+    }
+
+    footer {
+        padding: 15px;
+    }
+}
+
+/* =====================================
+   CELULARES PEQUENOS
+===================================== */
+
+@media (max-width: 480px) {
+
+    .cabecalho nav {
+        gap: 8px;
+    }
+
+    .cabecalho nav a {
+        font-size: 12px;
+    }
+
+    .hero-conteudo .par {
+        font-size: 34px;
+    }
+
+    .hero-conteudo .text {
+        font-size: 14px;
+    }
+
+    .hero-imagem img {
+        max-height: 320px;
+    }
+
+    .oque {
+        font-size: 27px;
+    }
+
+    .frases h2 {
+        font-size: 23px;
+    }
+
+    .frases p {
+        font-size: 15px;
+    }
+
+    .servicos {
+        padding: 40px 15px;
+    }
+
+    .servicos-intro h1 {
+        font-size: 27px;
+    }
+
+    .servico-card {
+        padding: 20px;
+    }
+
+    .servico-card h2 {
+        font-size: 20px;
+    }
+
+    .card img {
+        height: 220px;
+    }
+
+    .espera h1 {
+        font-size: 26px;
+        padding: 40px 10px;
+    }
+
+    .real {
+        font-size: 11px;
+    }
+}
